@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Real Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('city')">City</button>
+    <button onclick="filterGallery('animals')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature" onclick="openLightbox(0)">
+    </div>
+    <div class="image city">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="City" onclick="openLightbox(1)">
+    </div>
+    <div class="image animals">
+      <img src="https://images.unsplash.com/photo-1601758123927-196d5f380d13" alt="Cat" onclick="openLightbox(2)">
+    </div>
+    <div class="image nature">
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b" alt="Forest" onclick="openLightbox(3)">
+    </div>
+    <div class="image city">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Cityscape" onclick="openLightbox(4)">
+    </div>
+    <div class="image animals">
+      <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006" alt="Dog" onclick="openLightbox(5)">
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="" alt="">
+    <div class="nav">
+      <span onclick="changeImage(-1)">&#10094;</span>
+      <span onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
